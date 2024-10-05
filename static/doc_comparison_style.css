@@ -1,0 +1,451 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 95vh;
+    margin: 20px;
+    background-color: #ced4dd;
+}
+
+.header {
+    z-index: 1;
+    left: 20px;
+    width: auto;
+    text-align: center;
+    float: none;
+}
+
+.header h1 {
+    z-index: 1;
+    background-color: black;
+    color: white;
+    height: 15px;
+    width: auto;
+    margin: 0;
+    line-height: 10px;
+    text-align: center;
+
+}
+
+
+.homepage-container {
+    position: fixed;
+    text-align: center;
+    justify-content:flex-start;
+    background-color:	#adcbe3;
+    padding: 20px;
+    border: 1px solid #5b5d5e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 4%;
+    width: 98%;
+    top: 0;
+}   
+
+.home-button-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: -1%;
+    left: 2%;
+    margin-bottom: 50px; /* Space between button sets */
+    justify-content: flex-start; /* Keep content to the left */
+    height: 70px; /* Match the image height */
+    width: 50%;
+    z-index: 1;
+}
+
+.home-button {
+    z-index: 2;
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 10%; /* Full width initially */
+    height: 100%;
+    margin-top: 1%;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s, width 0.3s ease;
+    color: rgba(0, 0, 0, 1);
+    opacity: 0.6;
+}
+
+
+.home-icon {
+    display: flex;
+    position: fixed;
+    top: 3%;
+    left: 4%;
+    z-index: -1;
+}
+
+.applogo {
+    position: fixed;
+    left: 42%;
+    top: 0%;
+}
+
+
+.upload-container {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: #e7eff6ac;
+    padding: 20px;
+    border: 1px solid #5b5d5e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10%;
+    margin-top: 4%;
+
+}
+
+
+.drop-area1 {
+    width: 600px;
+    height: 190px;
+    border-style:solid;
+    border-width: 3px;
+    border-color: rgb(36, 13, 147);
+    margin: 15px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.drop-area2 {
+    width: 600px;
+    height: 190px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(36, 13, 147);
+    margin: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.drop-area1.highlight {
+    border-color: #6c5ce7;
+    background-color: #e7eff6;
+}
+
+.drop-area2.highlight {
+    border-color: #6c5ce7;
+    background-color: #e7eff6;
+}
+
+.file-list1 {
+
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.file-list2 {
+
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+
+}
+
+
+.download-container {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: #e7eff6ac;
+    padding: 20px;
+    border: 1px solid #5b5d5e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.start-upload {
+    z-index: 1;
+    display: inline-block;
+    background-color: #e7eff6ac; /* Primary button color */
+    color: rgb(0, 0, 0);         /* Text color */
+    border-radius: 20px;  /* Rounded corners */
+    margin: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    height: 50px;
+    width: 100px;
+}
+
+.start-upload:hover{
+    background-color: #b9d8f3ac; /* Slightly darker on hover */
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+
+.download-button {
+
+    z-index: 1;
+    background-color: #e7eff6ac;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    height: 50px;
+    width: 100px;
+}
+
+.download-button:hover {
+    background-color: #b9d8f3ac;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.sidebar {
+    position: fixed; /* Make the sidebar stick to the left side */
+    top: 9%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #e7eff6ac;
+    padding: 20px;
+    border: 1px solid #5b5d5e;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 95%; /* Full height of the viewport */
+    width: 12%;
+    margin: 0; /* Remove the margin so it's flush to the side */
+}
+
+
+
+.annotationreport-image,
+.doccompare-image,
+.converttopdf-image
+.converttoword-image {
+    position: relative;
+    float: left;
+    bottom: 0;
+    left: 0px; 
+    z-index: -1; 
+}
+
+
+/* Container for each button and its image */
+
+.annotation-button-container,
+.doccompare-button-container,
+.converttopdf-button-container,
+.converttoword-button-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;  /* Full width of sidebar */
+    margin-bottom: 50px; /* Space between button sets */
+    justify-content: flex-start; /* Keep content to the left */
+    height: 70px; /* Match the image height */
+    width: 240%;
+
+    
+}
+
+
+.annotationreport-button,
+.doccompare-button,
+.converttopdf-button,
+.converttoword-button {
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%; /* Full width initially */
+    height: 68px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s, width 0.3s ease;
+    color: rgba(0, 0, 0, 1);
+    opacity: 0.6;
+}
+
+/* Make the buttons skinnier on smaller screens */
+@media (max-width: 1200px) {
+
+    .annotationreport-button,
+    .doccompare-button,
+    .converttopdf-button,
+    .converttoword-button {
+        width: 80%; /* Skinnier on medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+
+    .annotationreport-button,
+    .doccompare-button,
+    .converttopdf-button,
+    .converttoword-button {
+        width: 60%; /* Even skinnier on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .annotationreport-button,
+    .doccompare-button,
+    .converttopdf-button,
+    .converttoword-button {
+        width: 50%; /* Very narrow for very small screens */
+    }
+}
+
+
+
+.annotationreport-button:hover,
+.doccompare-button:hover,
+.converttopdf-button:hover,
+.converttoword-button:hover {
+    background-color: #b9d8f3ac; 
+    opacity: 0.5;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+
+.sidebar-nav {
+    position: fixed;     /* Fixes the sidebar to the viewport */
+    top: 0;              /* Aligns the sidebar to the top of the viewport */
+    left: 0;            /* Moves the sidebar to the far right of the screen */
+    width: 300px;        /* Sidebar width (make sure to specify 'px') */
+    height: 400px;       /* Full height of the viewport so it spans from top to bottom */
+    text-align: left;  /* Centers text inside the sidebar */
+    justify-content: flex-start;  /* Aligns content at the start */
+    background-color: transparent;  /* Semi-transparent background color */
+    padding: 20px;       /* Adds padding inside the sidebar */
+    border-radius: 10px; /* Rounds the corners */
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: black;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-icon {
+    grid-area: hamburger;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 30px 20px 30px 0;
+    position: absolute;
+    top: -1%;
+    left: 420%;
+    user-select: none;
+    visibility: visible;
+    margin-right: 100px;
+  }
+  .navicon {
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 30px;
+    position: relative;
+  }
+  .navicon:before {
+    top: 5px;
+  }
+  .navicon:after {
+    top: -5px;
+  }
+  .navicon:before,
+  .navicon:after {
+    background: #333;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease-out;
+  }
+  .menu {
+    grid-area: nav;
+    max-width: unset;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 40px;
+    position: absolute;
+    top: 17%;
+    left: 388%;
+    height: 70%;
+    background-color: #adcbe3;
+    border-radius: 5px;
+  }
+  .menu a {
+    padding: 7px 40px;
+    background-color: transparent;
+    width: 15%;
+    text-align: center;
+  }
+  .menu-btn:checked ~ .menu {
+    max-height: 200px;
+  }
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  .menu-btn:checked ~ .menu-icon .navicon:before,
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    top: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
