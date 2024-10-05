@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document Comparison</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='doc_comparison_style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  </head>
+  <body>
+
+
+    <div class="homepage-container">
+
+      <img class="applogo" src="{{ url_for('static', filename='applogo.png') }}" width="200" height="70">
+
+
+
+  </div>
+
+
+
+  <div id="sidebar-nav" class="sidebar-nav">
+
+      <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
+      <label class="menu-icon" for="menu-btn">
+        <span class="navicon" aria-label="Hamburger menu 'icon'"> </span>
+      </label>
+
+      <nav class="menu">
+
+        <a class="nav-item" href="/home/">Home</a>
+        <a class="nav-item" href="/about/">About</a>
+        <a class="nav-item" href="/privacypolicy/">Privacy</a>
+        <a class="nav-item" href="/acknowledgements/">Credits</a>
+        <a class="nav-item" href="/support/">Help</a>
+        <a class="nav-item" href="/appdownloadpage/">App</a>
+
+      </nav>
+
+  </div>
+
+
+  
+    <div class="upload-container">
+      <h1>Document Comparison Report Generator</h1>
+
+      <!-- First file drop area -->
+      <div id="drop-area1" class="drop-area1">
+        <p>Drag your first file here or click to select</p>
+        <input type="file" id="file-elem1" class="from-file" name="file1" accept=".doc,.docx, .pdf">
+      </div>
+
+      <div id="file-list1"></div> 
+
+      <!-- Second file drop area -->
+      <div id="drop-area2" class="drop-area2">
+        <p>Drag your second file here or click to select</p>
+        <input type="file" id="file-elem2" class="from-file" name="file2">
+      </div>
+
+      <div id="file-list2"></div>
+
+
+
+
+      <!-- Conditionally show the download link if docname is available -->
+      {% if docname %}
+      <font color="#005900"><a> Comparison report generated </a> </font> <br>
+      <button id="download-button" type="button" onclick="window.location.href = '{{ docname }}';" class="download-button">Download</button>
+      {% endif %}
+    
+
+    <button class="start-upload" id="start-upload" type="button">Create Report</button>
+      
+
+    </div>
+
+    
+
+
+    <div id="sidebar" class="sidebar">
+
+
+      <form method="post" action="/">
+
+
+          <div class="annotation-button-container">
+              <img src="{{ url_for('static', filename='annotationsicon.png') }}" width="70" height="60" class="annotationreport-image">
+              <button id="annotationreport-button" type="button" onclick="window.location.href = '{{ var_annotation_report }}';" class="annotationreport-button">Annotation Report</button>
+          </div>
+
+
+          <div class="doccompare-button-container">
+              <img src="{{ url_for('static', filename='compareicon.png') }}" width="70" height="60" class="doccompare-image">
+              <button id="doccompare-button" type="button" onclick="window.location.href = '{{ var_document_comparison}}';" class="doccompare-button">Compare Docs</button>
+          </div>
+
+
+          <div class="converttopdf-button-container">
+              <img src="{{ url_for('static', filename='wordtopdf.png') }}" width="80" height="43" class="converttopdf-image">
+              <button id="converttopdf-button" type="button" onclick="window.location.href = '{{ var_convert_to_pdf}}';" class="converttopdf-button">Convert To PDF</button>
+          </div>
+
+
+          <div class="converttoword-button-container">
+              <img src="{{ url_for('static', filename='pdftoword.png') }}" width="80" height="43" class="converttoword-image">
+              <button id="converttoword" type="button" onclick="window.location.href = '{{ var_convert_to_word}}';" class="converttoword-button">Convert To Word</button>
+          </div>
+
+
+
+
+
+
+
+      </form>
+
+
+</div>
+
+
+<div class="home-button-container">
+  <button id="home-button" type="button" onclick="window.location.href = '{{ var_homepage }}';" class="home-button"></button>
+  <img class="home-icon" src="{{ url_for('static', filename='homebutton.png') }}", width="30" height="30">
+</div>
+
+    <script src="{{ url_for('static', filename='doc_comparison_script.js') }}"></script>
+  </body>
+</html>

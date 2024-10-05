@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Test Document Comparison</h1>
+    
+    <!-- Conditionally show the download link if docname is available -->
+    {% if docname %}
+      <p>Your comparison report is ready for download:
+        <a href="{{ docname }}" target="_blank">Download here</a>
+      </p>
+    {% else %}
+      <p>No document available for download.</p>
+    {% endif %}
+  </body>
+</html>

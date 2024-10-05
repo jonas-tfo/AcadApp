@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AcadApp</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='privacystyle.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+
+
+        <div class="homepage-container">
+
+            <img class="applogo" src="{{ url_for('static', filename='applogo.png') }}" width="200" height="70">
+
+
+
+        </div>
+
+
+
+        <div id="sidebar-nav" class="sidebar-nav">
+
+            <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+              <span class="navicon" aria-label="Hamburger menu 'icon'"> </span>
+            </label>
+
+            <nav class="menu">
+
+              <a class="nav-item" href="/home/">Home</a>
+              <a class="nav-item" href="/about/">About</a>
+              <a class="nav-item" href="/privacypolicy/">Privacy</a>
+              <a class="nav-item" href="/acknowledgements/">Credits</a>
+              <a class="nav-item" href="/support/">Help</a>
+              <a class="nav-item" href="/appdownloadpage/">App</a>
+
+            </nav>
+
+
+        </div>
+
+        
+
+        <div class="upload-container">
+            
+            <div class="title">
+                <a>Privacy Policy</a>
+            </div>
+
+
+
+
+            <div class="text-field">
+
+                <div class="text">
+                    <font size="3"><a> We prioritize the privacy and security of your data. When you upload files to our server, they are temporarily stored for the sole purpose of processing as requested by you. 
+                        We do not use these files for any other purpose, and they are not shared with any third parties. Files are automatically deleted from our server at regular intervals after 
+                        processing is complete. By using our service, you agree to the collection and temporary storage of files as outlined in this policy. 
+                        If you have any questions, please contact us at officialacadapp@gmail.com.
+                    </a></font>
+                </div>
+
+
+            </div>
+                
+        </div>
+
+        <div class="home-button-container">
+            <button id="home-button" type="button" onclick="window.location.href = '{{ var_homepage }}';" class="home-button"></button>
+            <img class="home-icon" src="{{ url_for('static', filename='homebutton.png') }}", width="30" height="30">
+        </div>
+
+    </body>
+</html>

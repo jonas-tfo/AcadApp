@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AcadApp</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/homepage_style.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    </head>
+    <body>
+
+        
+        <title>AcadApp</title>
+
+
+        <div class="homepage-container">
+
+            <img class="applogo" src="{{ url_for('static', filename='applogo.png') }}" width="200" height="70">
+
+
+
+        </div>
+
+
+
+        <div id="sidebar" class="sidebar">
+
+            <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+              <span class="navicon" aria-label="Hamburger menu 'icon'"> </span>
+            </label>
+
+            <nav class="menu">
+
+              <a class="nav-item" href="/home/">Home</a>
+              <a class="nav-item" href="/about/">About</a>
+              <a class="nav-item" href="/privacypolicy/">Privacy</a>
+              <a class="nav-item" href="/acknowledgements/">Credits</a>
+              <a class="nav-item" href="/support/">Help</a>
+              <a class="nav-item" href="/appdownloadpage/">App</a>
+
+            </nav>
+
+
+        </div>
+                
+                <div class="button-container">
+
+
+                    <form method="post" action="/">
+
+                        <button id="annotation_report" type = "button" onclick = "window.location.href = '{{ var_annotation_report }}';" class="annot-button" >  Annotation Report  </button>   
+                        <img src="{{ url_for('static', filename='annotationsicon.png') }}" width="70" height="60" class="annotationreport-image">
+
+                    </form>
+                
+
+                
+
+                    <form method="post" action="/">
+
+                        <button id="document_comparison" type = "button" onclick = "window.location.href = '{{ var_document_comparison }}';" class="compare-button" >Compare Documents</button> 
+                        <img src="{{ url_for('static', filename='compareicon.png') }}" width="70" height="60" class="doccompare-image">
+
+                    </form>
+
+
+
+                    <form method="post" action="/">
+
+                        <button id="convert-to-pdf" type = "button" onclick = "window.location.href = '{{ var_convert_to_pdf }}';" class="convert-pdf-button" >Convert to PDF</button> 
+                        <img src="{{ url_for('static', filename='wordtopdf.png') }}" width="70" height="40" class="converttopdf-image">
+
+                    </form>
+
+
+
+                    <form method="post" action="/">
+
+                        <button id="convert-to-word" type = "button" onclick = "window.location.href = '{{ var_convert_to_word }}';" class="convert-word-button" >Convert to Word</button> 
+                        <img src="{{ url_for('static', filename='pdftoword.png') }}" width="70" height="40" class="converttoword-image">
+
+                    </form>
+                
+                </div>    
+
+
+
+
+                    
+    </body>
+</html>
+
+
+

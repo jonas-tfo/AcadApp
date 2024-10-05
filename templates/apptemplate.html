@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AcadApp</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='appstyle.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+
+        <div class="homepage-container">
+
+            <img class="applogo" src="{{ url_for('static', filename='applogo.png') }}" width="200" height="70">
+
+
+
+        </div>
+
+
+
+        <div id="sidebar-nav" class="sidebar-nav">
+
+            <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+              <span class="navicon" aria-label="Hamburger menu 'icon'"> </span>
+            </label>
+
+            <nav class="menu">
+
+              <a class="nav-item" href="/home/">Home</a>
+              <a class="nav-item" href="/about/">About</a>
+              <a class="nav-item" href="/privacypolicy/">Privacy</a>
+              <a class="nav-item" href="/acknowledgements/">Credits</a>
+              <a class="nav-item" href="/support/">Help</a>
+              <a class="nav-item" href="/appdownloadpage/">App</a>
+
+            </nav>
+
+        </div>
+
+        <div class="upload-container">
+            
+            <div class="title">
+                <a>Desktop App</a>
+            </div>
+
+
+
+
+
+            <div class="text-field">
+                
+              
+               
+
+        
+
+
+                <div class="text">
+                    <font size="3"><a> Download our app to use all of our tools straight from your desktop! All file uploads and processing
+                                       take place on your computer, meaning that your files are never stored on our server, everything is 100% 
+                                       local. </a></font>
+
+
+                </div>
+
+
+            </div>
+                
+        </div>
+
+
+
+        <form method="POST" enctype="multipart/form-data">
+            <button class="download-app" type="button" onclick="window.location.href = '{{ var_downloadapp }}';"> Download For Mac OS </button>
+            <img class="download-icon" src="{{ url_for('static', filename='downloadbutton.png') }}", width="45" height="40">
+        </form>
+
+        
+
+        <div class="home-button-container">
+            <button id="home-button" type="button" onclick="window.location.href = '{{ var_homepage }}';" class="home-button"></button>
+            <img class="home-icon" src="{{ url_for('static', filename='homebutton.png') }}", width="30" height="30">
+        </div>
+
+
+    </body>
+</html>
